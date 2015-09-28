@@ -1,0 +1,18 @@
+{
+  "name": "awsm-mailer",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eahefnawy/awsm-mailer"
+  },
+  "author": "Eslam A. Hefnawy <eahefnawy@gmail.com>",
+  "description": "AWSM package for sending emails.",
+  "resources": {
+    "cloudFormation": {
+      "LambdaIamPolicyDocumentStatements": [],
+      "ApiGatewayIamPolicyDocumentStatements": [],
+      "Resources": {}
+    }
+  }
+}

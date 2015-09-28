@@ -1,0 +1,19 @@
+{
+  "name": "awsm-mailer",
+  "version": "0.0.1",
+  "description": "AWSM package for sending emails.",
+  "author": "Eslam A. Hefnawy <eahefnawy@gmail.com>",
+  "license": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eahefnawy/awsm-mailer"
+  },
+  "keywords": ["JAWS", "AWSM", "AWS API endpint", "mailer", "email"],
+  "devDependencies": {},
+  "dependencies": {
+    "bluebird": "^2.10.1",
+    "nodemailer": "^1.5.0",
+    "email-templates": "^2.0.1",
+    "handlebars": "^3.0.0"
+  }
+}
