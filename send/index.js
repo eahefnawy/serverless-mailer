@@ -34,14 +34,11 @@ module.exports.run = function(event, context, cb) {
           pass: process.env.EMAIL_SERVICE_PASS
         }
       });
-
-      transporter.sendMail({
-        from: event.from,
-        to: event.to,
-        subject: event.subject,
-        text: result.text,
-        html: result.html
-      });
+      
+      var event.text = result.text;
+      var event.html = result.html;
+      
+      transporter.sendMail(event);
       
       return cb(null, {message: 'Yaay success'});
     })
