@@ -58,7 +58,7 @@ You can edit the template text by editing these two files:
 ```
 
 ### Supported Services
-awsm-mailer supports the following 30 service, pre-configured and ready to use. You just provide the username/password:
+awsm-mailer supports the following 30 service, pre-configured and ready to use. You just provide the service, username & password in env vars as shown earlier:
 
 * **'1und1'**
 * **'AOL'**
