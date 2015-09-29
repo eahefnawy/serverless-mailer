@@ -49,7 +49,6 @@ You should receive an email that says:
 
 ```
 Welcome Sam Smith
-
 ```
 
 You can edit the template text by editing these two files:
@@ -60,7 +59,7 @@ You can edit the template text by editing these two files:
 ```
 
 ### Supported Services
-This package supports the following 30 service, pre-configured and ready to use. You just provide the username/password:
+awsm-mailer supports the following 30 service, pre-configured and ready to use. You just provide the username/password:
 
 * **'1und1'**
 * **'AOL'**
@@ -136,10 +135,34 @@ Here's the full list of supported templates:
 - [walrus](https://github.com/jeremyruppel/walrus) [(website)](http://documentup.com/jeremyruppel/walrus/)
 - [whiskers](https://github.com/gsf/whiskers.js)
 
-after chosing your template engine, make sure the file extentions of the template files match the template you chose. For examples:
+after chosing your template engine, make sure the file extentions of the template files match the template you chose:
 
 ```
 html.{{ext}}
 text.{{ext}}
 style.{{ext}}
 ```
+
+### Mail Options (Event Properties):
+
+Here's the full list of options you can pass in your event:
+
+  - **from** - The e-mail address of the sender. All e-mail addresses can be plain `'sender@server.com'` or formatted `'Sender Name <sender@server.com>'`, see [here](#address-formatting) for details
+  - **sender** - An e-mail address that will appear on the *Sender:* field
+  - **to** - Comma separated list or an array of recipients e-mail addresses that will appear on the *To:* field
+  - **cc** - Comma separated list or an array of recipients e-mail addresses that will appear on the *Cc:* field
+  - **bcc** - Comma separated list or an array of recipients e-mail addresses that will appear on the *Bcc:* field
+  - **replyTo** - An e-mail address that will appear on the *Reply-To:* field
+  - **inReplyTo** - The message-id this message is replying
+  - **references** - Message-id list (an array or space separated string)
+  - **subject** - The subject of the e-mail
+  - **template** - The template to use for this email. Make sure it matches one of the folder names inside the `templates` folder
+  - **context** - The context/data the template needs. eg. `{"first_name": "..."}`
+  - **watchHtml** - Apple Watch specific HTML version of the message (*experimental*)
+  - **headers** - An object or array of additional header fields (e.g. *{"X-Key-Name": "key value"}* or *[{key: "X-Key-Name", value: "val1"}, {key: "X-Key-Name", value: "val2"}]*)
+  - **attachments** - An array of attachment objects
+  - **alternatives** - An array of alternative text contents (in addition to text and html parts)
+  - **envelope** - optional SMTP envelope, if auto generated envelope is not suitable
+  - **messageId** - optional Message-Id value, random value will be generated if not set
+  - **date** - optional Date value, current UTC string will be used if not set
+  - **encoding** - optional transfer encoding for the textual parts
