@@ -3,7 +3,7 @@ AWSM package for sending emails.
 
 ### Features
 
-* 30 Pre-configured services (Gmail, Hotmail, SendGrid...etc)
+* 30 pre-configured services (Gmail, Hotmail, SendGrid...etc)
 * HTML content as well as plain text alternative
 * 32 HTML template engines (handlebars, jade, haml...etc)
 * Easy HTML styling with Juice
