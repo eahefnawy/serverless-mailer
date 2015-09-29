@@ -10,7 +10,6 @@ AWSM package for sending emails.
 * Embedded images in HTML
 * Email Attachments
 * Unicode to use any characters
-In your JAWS project root directory, run:
 
 ### Quick Usage
 In your JAWS project root directory, run:
