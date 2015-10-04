@@ -1,5 +1,5 @@
 # ✉️ awsm-mailer
-AWSM package for sending emails.
+AWSM package for sending emails. 
 
 ### Features
 
