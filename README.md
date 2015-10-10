@@ -16,8 +16,7 @@ In your JAWS project root directory, run:
 In your JAWS project root directory, run:
 
 ```
-jaws module install https://github.com/jaws-framework/jaws-core-js
-jaws module install https://github.com/eahefnawy/awsm-mailer
+npm install awsm-mailer
 ```
 
 Set the following env vars (using CLI or the .env file):
@@ -54,8 +53,8 @@ Welcome Sam Smith
 You can edit the template text by editing these two files:
 
 ```
-<project-dir>/back/aws_modules/awsm-mailer/send/templates/html.handlebars
-<project-dir>/back/aws_modules/awsm-mailer/send/templates/text.handlebars
+<project-dir>/aws_modules/awsm-mailer/mailer/templates/html.handlebars
+<project-dir>/aws_modules/awsm-mailer/mailer/templates/text.handlebars
 ```
 
 ### Supported Services
@@ -95,7 +94,7 @@ awsm-mailer supports the following 30 service, pre-configured and ready to use. 
 awsm-mailer comes with a `welcome` template for demonstration. You can add/remove templates from the following directory:
 
 ```
-<project-dir>/back/aws_modules/awsm-mailer/send/templates/
+<project-dir>/aws_modules/awsm-mailer/mailer/templates/
 ```
 
 awsm-mailer uses handlebars as the default template engine. You can use any other template engine by adding it to the `package.json` file and update dependencies with `npm install`.

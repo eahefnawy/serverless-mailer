@@ -8,11 +8,12 @@
     "deploy": true,
     "package": {
       "optimize": {
-        "builder": "browserify",
+        "builder": false,
         "minify": true,
         "ignore": [],
         "exclude": [
-          "aws-sdk"
+          "aws-sdk",
+          "email-templates"
         ],
         "includePaths": []
       },
@@ -27,7 +28,7 @@
     }
   },
   "apiGateway": {
-    "deploy": true,
+    "deploy": false,
     "cloudFormation": {
       "Type": "AWS",
       "Path": "awsm-mailer/send",
