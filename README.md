@@ -1,16 +1,15 @@
 # ✉️ awsm-mailer
-AWSM package for sending emails.
+AWSM package for sending emails. 
 
 ### Features
 
-* 30 Pre-configured services (Gmail, Hotmail, SendGrid...etc)
+* 30+ pre-configured services (Gmail, Hotmail, SendGrid...etc)
 * HTML content as well as plain text alternative
-* 32 HTML template engines (handlebars, jade, haml...etc)
+* 30+ supported HTML template engines (handlebars, jade, haml...etc)
 * Easy HTML styling with Juice
 * Embedded images in HTML
 * Email Attachments
 * Unicode to use any characters
-In your JAWS project root directory, run:
 
 ### Quick Usage
 In your JAWS project root directory, run:
@@ -58,7 +57,7 @@ You can edit the template text by editing these two files:
 ```
 
 ### Supported Services
-awsm-mailer supports the following 30 service, pre-configured and ready to use. You just provide the username/password:
+awsm-mailer supports the following 30 service, pre-configured and ready to use. You just provide the service, username & password in env vars as shown earlier:
 
 * **'1und1'**
 * **'AOL'**
