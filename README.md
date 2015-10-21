@@ -1,6 +1,6 @@
 # ✉️ awsm-mailer
 AWSM package for sending emails. 
-
+ 
 ### Features
 
 * 30+ pre-configured services (Gmail, Hotmail, SendGrid...etc)
