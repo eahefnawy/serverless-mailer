@@ -1,0 +1,12 @@
+{
+  "send": {
+    "from": "sender@address.com",
+    "to": "receiver@address.com",
+    "subject": "Hello",
+    "template": "welcome",
+    "context": {
+      "first_name": "Sam",
+      "last_name": "Smith"
+    }
+  }
+}

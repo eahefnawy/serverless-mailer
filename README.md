@@ -1,6 +1,6 @@
-# ✉️ awsm-mailer
-AWSM package for sending emails. 
- 
+# ✉️ serverless-mailer
+Serverless Module for sending emails
+
 ### Features
 
 * 30+ pre-configured services (Gmail, Hotmail, SendGrid...etc)
@@ -12,10 +12,10 @@ AWSM package for sending emails.
 * Unicode to use any characters
 
 ### Quick Usage
-In your JAWS project root directory, run:
+In your Serverless project root directory, run:
 
 ```
-npm install awsm-mailer
+sls module install https://github.com/eahefnawy/awsm-mailer
 ```
 
 Set the following env vars (using CLI or the .env file):
@@ -26,7 +26,7 @@ EMAIL_SERVICE_USER=username@gmail.com
 EMAIL_SERVICE_PASS=password
 ```
 
-deploy your code with `JAWS dash`, then test the Lambda with the following event:
+deploy your code then test the Lambda with the following event:
 
 ```
 {
@@ -52,12 +52,12 @@ Welcome Sam Smith
 You can edit the template text by editing these two files:
 
 ```
-<project-dir>/aws_modules/awsm-mailer/mailer/templates/html.handlebars
-<project-dir>/aws_modules/awsm-mailer/mailer/templates/text.handlebars
+<project-dir>/back/modules/serverless-mailer/lib/templates/html.handlebars
+<project-dir>/back/modules/serverless-mailer/lib/templates/text.handlebars
 ```
 
 ### Supported Services
-awsm-mailer supports the following 30 service, pre-configured and ready to use. You just provide the service, username & password in env vars as shown earlier:
+serverless-mailer supports the following 30 service, pre-configured and ready to use. You just provide the service, username & password in env vars as shown earlier:
 
 * **'1und1'**
 * **'AOL'**
@@ -90,13 +90,13 @@ awsm-mailer supports the following 30 service, pre-configured and ready to use. 
 * **'Zoho'**
 
 ### Template Engines
-awsm-mailer comes with a `welcome` template for demonstration. You can add/remove templates from the following directory:
+serverless-mailer comes with a `welcome` template for demonstration. You can add/remove templates from the following directory:
 
 ```
-<project-dir>/aws_modules/awsm-mailer/mailer/templates/
+<project-dir>/back/modules/serverless-mailer/lib/templates/
 ```
 
-awsm-mailer uses handlebars as the default template engine. You can use any other template engine by adding it to the `package.json` file and update dependencies with `npm install`.
+serverless-mailer uses handlebars as the default template engine. You can use any other template engine by adding it to the module's `package.json` file and update dependencies with `npm install`.
 
 Here's the full list of supported templates:
 

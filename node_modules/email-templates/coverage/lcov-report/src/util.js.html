@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/util.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src/util.js</span></h1>
+    <h2>
+        Statements: <span class="metric">91.43% <small>(32 / 35)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">71.43% <small>(10 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(8 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(29 / 29)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">src/</a> &#187; util.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">45</span>
+<span class="cline-any cline-yes">45</span>
+<span class="cline-any cline-yes">45</span>
+<span class="cline-any cline-yes">45</span>
+<span class="cline-any cline-yes">45</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">96</span>
+<span class="cline-any cline-yes">96</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">58</span>
+<span class="cline-any cline-yes">58</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-yes">29</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports.ensureDirectory = ensureDirectory;
+exports.readContents = readContents;
+exports.renderFile = renderFile;
+&nbsp;
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? <span class="branch-0 cbranch-no" title="branch not covered" >obj </span>: { 'default': obj }; }
+&nbsp;
+var _bluebird = require('bluebird');
+&nbsp;
+var _bluebird2 = _interopRequireDefault(_bluebird);
+&nbsp;
+var _fs = require('fs');
+&nbsp;
+var _glob = require('glob');
+&nbsp;
+var _glob2 = _interopRequireDefault(_glob);
+&nbsp;
+var _templateManager = require('./template-manager');
+&nbsp;
+var _templateManager2 = _interopRequireDefault(_templateManager);
+&nbsp;
+var readFileP = _bluebird2['default'].promisify(_fs.readFile);
+var globP = _bluebird2['default'].promisify(_glob2['default']);
+&nbsp;
+function ensureDirectory(path, callback) {
+  return new _bluebird2['default'](function (resolve, reject) {
+    (0, _fs.stat)(path, function (err, stat) {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (err) <span class="cstat-no" title="statement not covered" >return reject(err);</span>
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (!stat.isDirectory()) <span class="cstat-no" title="statement not covered" >return reject();</span>
+      resolve();
+    });
+  }).nodeify(callback);
+}
+&nbsp;
+function readContents(path, type) {
+  return globP('' + path + '/*' + type + '.*').then(function (files) {
+    if (!files.length) return null;
+&nbsp;
+    return readFileP(files[0], 'utf8').then(function (content) {
+      if (!content.length) return null;
+      return {
+        filename: files[0],
+        content: content
+      };
+    });
+  });
+}
+&nbsp;
+function renderFile(file, options) {
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!file) <span class="cstat-no" title="statement not covered" >return Promise.resolve(null);</span>
+  return _templateManager2['default'].render(file.filename, file.content, options);
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9qZWR1YW4vQ29kZS9lbWFpbC10ZW1wbGF0ZXMvc3JjL3V0aWwuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7UUFRZ0IsZUFBZSxHQUFmLGVBQWU7UUFXZixZQUFZLEdBQVosWUFBWTtRQWdCWixVQUFVLEdBQVYsVUFBVTs7Ozt3QkFuQ1osVUFBVTs7OztrQkFDSyxJQUFJOztvQkFDaEIsTUFBTTs7OzsrQkFDUixvQkFBb0I7Ozs7QUFFbkMsSUFBTSxTQUFTLEdBQUcsc0JBQUUsU0FBUyxLQUpyQixRQUFRLENBSXVCLENBQUE7QUFDdkMsSUFBTSxLQUFLLEdBQUcsc0JBQUUsU0FBUyxtQkFBTSxDQUFBOztBQUV4QixTQUFTLGVBQWUsQ0FBRSxJQUFJLEVBQUUsUUFBUSxFQUFFO0FBQy9DLFNBQU8sMEJBQU0sVUFBQyxPQUFPLEVBQUUsTUFBTSxFQUFLO0FBQ2hDLFlBVGMsSUFBSSxFQVNiLElBQUksRUFBRSxVQUFDLEdBQUcsRUFBRSxJQUFJLEVBQUs7QUFDeEIsVUFBSSxHQUFHLEVBQUUsT0FBTyxNQUFNLENBQUMsR0FBRyxDQUFDLENBQUE7QUFDM0IsVUFBSSxDQUFDLElBQUksQ0FBQyxXQUFXLEVBQUUsRUFBRSxPQUFPLE1BQU0sRUFBRSxDQUFBO0FBQ3hDLGFBQU8sRUFBRSxDQUFBO0tBQ1YsQ0FBQyxDQUFBO0dBQ0gsQ0FBQyxDQUNELE9BQU8sQ0FBQyxRQUFRLENBQUMsQ0FBQTtDQUNuQjs7QUFFTSxTQUFTLFlBQVksQ0FBRSxJQUFJLEVBQUUsSUFBSSxFQUFFO0FBQ3hDLFNBQU8sS0FBSyxNQUFJLElBQUksVUFBSyxJQUFJLFFBQUssQ0FDakMsSUFBSSxDQUFDLFVBQUMsS0FBSyxFQUFLO0FBQ2YsUUFBSSxDQUFDLEtBQUssQ0FBQyxNQUFNLEVBQUUsT0FBTyxJQUFJLENBQUE7O0FBRTlCLFdBQU8sU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUMsRUFBRSxNQUFNLENBQUMsQ0FDakMsSUFBSSxDQUFDLFVBQUMsT0FBTyxFQUFLO0FBQ2pCLFVBQUksQ0FBQyxPQUFPLENBQUMsTUFBTSxFQUFFLE9BQU8sSUFBSSxDQUFBO0FBQ2hDLGFBQU87QUFDTCxnQkFBUSxFQUFFLEtBQUssQ0FBQyxDQUFDLENBQUM7QUFDbEIsZUFBTyxFQUFFLE9BQU87T0FDakIsQ0FBQTtLQUNGLENBQUMsQ0FBQTtHQUNILENBQUMsQ0FBQTtDQUNIOztBQUVNLFNBQVMsVUFBVSxDQUFFLElBQUksRUFBRSxPQUFPLEVBQUU7QUFDekMsTUFBSSxDQUFDLElBQUksRUFBRSxPQUFPLE9BQU8sQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLENBQUE7QUFDdkMsU0FBTyw2QkFBRyxNQUFNLENBQUMsSUFBSSxDQUFDLFFBQVEsRUFBRSxJQUFJLENBQUMsT0FBTyxFQUFFLE9BQU8sQ0FBQyxDQUFBO0NBQ3ZEIiwiZmlsZSI6Ii9Vc2Vycy9qZWR1YW4vQ29kZS9lbWFpbC10ZW1wbGF0ZXMvc3JjL3V0aWwuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUCBmcm9tICdibHVlYmlyZCdcbmltcG9ydCB7cmVhZEZpbGUsIHN0YXR9IGZyb20gJ2ZzJ1xuaW1wb3J0IGdsb2IgZnJvbSAnZ2xvYidcbmltcG9ydCB0bSBmcm9tICcuL3RlbXBsYXRlLW1hbmFnZXInXG5cbmNvbnN0IHJlYWRGaWxlUCA9IFAucHJvbWlzaWZ5KHJlYWRGaWxlKVxuY29uc3QgZ2xvYlAgPSBQLnByb21pc2lmeShnbG9iKVxuXG5leHBvcnQgZnVuY3Rpb24gZW5zdXJlRGlyZWN0b3J5IChwYXRoLCBjYWxsYmFjaykge1xuICByZXR1cm4gbmV3IFAoKHJlc29sdmUsIHJlamVjdCkgPT4ge1xuICAgIHN0YXQocGF0aCwgKGVyciwgc3RhdCkgPT4ge1xuICAgICAgaWYgKGVycikgcmV0dXJuIHJlamVjdChlcnIpXG4gICAgICBpZiAoIXN0YXQuaXNEaXJlY3RvcnkoKSkgcmV0dXJuIHJlamVjdCgpXG4gICAgICByZXNvbHZlKClcbiAgICB9KVxuICB9KVxuICAubm9kZWlmeShjYWxsYmFjaylcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIHJlYWRDb250ZW50cyAocGF0aCwgdHlwZSkge1xuICByZXR1cm4gZ2xvYlAoYCR7cGF0aH0vKiR7dHlwZX0uKmApXG4gIC50aGVuKChmaWxlcykgPT4ge1xuICAgIGlmICghZmlsZXMubGVuZ3RoKSByZXR1cm4gbnVsbFxuXG4gICAgcmV0dXJuIHJlYWRGaWxlUChmaWxlc1swXSwgJ3V0ZjgnKVxuICAgIC50aGVuKChjb250ZW50KSA9PiB7XG4gICAgICBpZiAoIWNvbnRlbnQubGVuZ3RoKSByZXR1cm4gbnVsbFxuICAgICAgcmV0dXJuIHtcbiAgICAgICAgZmlsZW5hbWU6IGZpbGVzWzBdLFxuICAgICAgICBjb250ZW50OiBjb250ZW50XG4gICAgICB9XG4gICAgfSlcbiAgfSlcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIHJlbmRlckZpbGUgKGZpbGUsIG9wdGlvbnMpIHtcbiAgaWYgKCFmaWxlKSByZXR1cm4gUHJvbWlzZS5yZXNvbHZlKG51bGwpXG4gIHJldHVybiB0bS5yZW5kZXIoZmlsZS5maWxlbmFtZSwgZmlsZS5jb250ZW50LCBvcHRpb25zKVxufVxuXG4iXX0=</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun May 17 2015 12:25:03 GMT-0500 (CDT)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

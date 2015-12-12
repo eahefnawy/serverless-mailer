@@ -1,0 +1,14 @@
+{
+  "name": "serverless-mailer",
+  "version": "0.0.1",
+  "profile": "aws-0",
+  "location": "https://github.com/eahefnawy/serverless-mailer",
+  "author": "Eslam A. Hefnawy <eslam@serverless.com>",
+  "description": "Serverless Module for sending emails",
+  "custom": {},
+  "cloudFormation": {
+    "lambdaIamPolicyDocumentStatements": [],
+    "resources": {}
+  },
+  "runtime": "nodejs"
+}

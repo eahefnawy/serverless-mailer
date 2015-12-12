@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- '0.10'
+- '0.12'
+- 'iojs'
+script: npm run test-travis
+after_script:
+- npm install -g coveralls@2
+- cat ./coverage/lcov.info | coveralls
+- npm install -g codeclimate-test-reporter
+- cat ./coverage/lcov.info | codeclimate
+notifications:
+  webhooks:
+    urls:
+    - https://webhooks.gitter.im/e/e6c41c02531e19ba2969
+    on_success: change
+    on_failure: always
+    on_start: false
+addons:
+  code_climate:
+    repo_token:
+      secure: ayPUGLw+UUDT7Ch9vofyNTxKTH/AHpdOTu4UcUwoaVmvwm7avB1pF1HYA6H+jwz+y6VqqKGN/wKWXCeSoQyvp+mZukegJm/B7O2juAu+6hEXib2caWQwT4YEBODXq9QIcEoeS/uu4DzgObpHBbTbaGL6MOOQsH+k0zg5Fyjysko=
