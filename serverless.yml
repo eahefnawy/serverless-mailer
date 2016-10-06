@@ -1,0 +1,6 @@
+name: serverless-mailer
+provider: aws
+
+functions:
+  send:
+    handler: index.send

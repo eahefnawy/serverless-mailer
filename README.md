@@ -1,5 +1,5 @@
 # ✉️ serverless-mailer
-Serverless Module for sending emails
+Serverless Service for sending emails. Compatible with Serverless version `1.0.0-rc.2`.
 
 ### Features
 
@@ -12,13 +12,22 @@ Serverless Module for sending emails
 * Unicode to use any characters
 
 ### Quick Usage
-In your Serverless project root directory, run:
+- Clone the service
 
 ```
-sls module install https://github.com/eahefnawy/awsm-mailer
+git clone https://github.com/eahefnawy/serverless-mailer
 ```
 
-Set the following env vars (using CLI or the .env file):
+- Install Dependencies
+
+```
+cd serverless-mailer
+npm install
+```
+
+- Set Environment Variables
+
+Open `.env` file and set the following env vars:
 
 ```
 EMAIL_SERVICE=Gmail
@@ -26,7 +35,11 @@ EMAIL_SERVICE_USER=username@gmail.com
 EMAIL_SERVICE_PASS=password
 ```
 
-deploy your code then test the Lambda with the following event:
+- Deploy The Service (`serverless deploy`)
+- Invoke The Function
+
+Edit the following event data in the `event.json` file with your own data:
+
 
 ```
 {
@@ -42,6 +55,8 @@ deploy your code then test the Lambda with the following event:
 
 ```
 
+Then invoke the `send` function by running `serverless invoke -f send -e event.json`
+
 This will use the `welcome` template coupled with the context/data (first_name & last_name).
 You should receive an email that says:
 
@@ -52,8 +67,8 @@ Welcome Sam Smith
 You can edit the template text by editing these two files:
 
 ```
-<project-dir>/back/modules/serverless-mailer/lib/templates/html.handlebars
-<project-dir>/back/modules/serverless-mailer/lib/templates/text.handlebars
+serverless-mailer/lib/templates/html.handlebars
+serverless-mailer/lib/templates/text.handlebars
 ```
 
 ### Supported Services
@@ -93,7 +108,7 @@ serverless-mailer supports the following 30 service, pre-configured and ready to
 serverless-mailer comes with a `welcome` template for demonstration. You can add/remove templates from the following directory:
 
 ```
-<project-dir>/back/modules/serverless-mailer/lib/templates/
+serverless-mailer/lib/templates/
 ```
 
 serverless-mailer uses handlebars as the default template engine. You can use any other template engine by adding it to the module's `package.json` file and update dependencies with `npm install`.
@@ -133,7 +148,7 @@ Here's the full list of supported templates:
 - [walrus](https://github.com/jeremyruppel/walrus) [(website)](http://documentup.com/jeremyruppel/walrus/)
 - [whiskers](https://github.com/gsf/whiskers.js)
 
-after chosing your template engine, make sure the file extentions of the template files match the template you chose:
+after choosing your template engine, make sure the file extensions of the template files match the template you chose:
 
 ```
 html.{{ext}}
