@@ -34,12 +34,11 @@ EMAIL_SERVICE=Gmail
 EMAIL_SERVICE_USER=username@gmail.com
 EMAIL_SERVICE_PASS=password
 ```
+**NOTE:** In case of GMAIL, you need to setup an "App Password"
 
 - Deploy The Service (`serverless deploy`)
-- Invoke The Function
-
-Edit the following event data in the `event.json` file with your own data:
-
+- Invoke The Function:
+dit the following event data in the `event.json` file with your own data:
 
 ```
 {
