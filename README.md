@@ -38,7 +38,8 @@ EMAIL_SERVICE_PASS=password
 
 - Deploy The Service (`serverless deploy`)
 - Invoke The Function:
-dit the following event data in the `event.json` file with your own data:
+
+Edit the following event data in the `event.json` file with your own data:
 
 ```
 {
