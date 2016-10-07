@@ -35,10 +35,8 @@ node_modules
 .tmp
 
 # Serverless stuff
-admin.env
+.serverless
 .env
 tmp
 .coveralls.yml
 tracking-id
-tmpdirs-serverless
-.env
