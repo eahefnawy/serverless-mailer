@@ -1,12 +1,10 @@
 {
-  "send": {
-    "from": "sender@address.com",
-    "to": "receiver@address.com",
-    "subject": "Hello",
-    "template": "welcome",
-    "context": {
-      "first_name": "Sam",
-      "last_name": "Smith"
-    }
+  "from": "eahefnawy@gmail.com",
+  "to": "eahefnawy@gmail.com",
+  "subject": "Hello",
+  "template": "welcome",
+  "context": {
+    "first_name": "Sam",
+    "last_name": "Smith"
   }
 }

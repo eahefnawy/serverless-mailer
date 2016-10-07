@@ -1,0 +1,13 @@
+{
+  "preset": "airbnb",
+  "disallowMultipleVarDecl": null,
+  "maximumLineLength": 120,
+  "requirePaddingNewLinesAfterBlocks": {
+    "allExcept": [
+      "inCallExpressions",
+      "inNewExpressions",
+      "inArrayExpressions",
+      "inProperties"
+    ]
+  }
+}

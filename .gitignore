@@ -41,3 +41,4 @@ tmp
 .coveralls.yml
 tracking-id
 tmpdirs-serverless
+.env

@@ -1,4 +1,4 @@
-name: serverless-mailer
+service: serverless-mailer-rc2
 provider: aws
 
 functions:
