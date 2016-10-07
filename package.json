@@ -14,7 +14,8 @@
   "keywords": ["serverless", "email", "mailer"],
   "scripts": {
     "test": "istanbul cover node_modules/mocha/bin/_mocha lib/__test__ -- -R spec --recursive",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lambda": "node_modules/mocha/bin/_mocha __test__"
   },
   "devDependencies": {
     "chai": "^3.5.0",
