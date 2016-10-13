@@ -55,7 +55,7 @@ Edit the following event data in the `event.json` file with your own data:
 
 ```
 
-Then invoke the `send` function by running `serverless invoke -f send -e event.json`
+Then invoke the `send` function by running `serverless invoke -f send -p event.json`
 
 This will use the `welcome` template coupled with the context/data (first_name & last_name).
 You should receive an email that says:
